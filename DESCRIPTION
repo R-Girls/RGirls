@@ -9,7 +9,7 @@ Authors@R:
            email = "batool@liverpool.ac.uk",
            comment = c(ORCID = "https://orcid.org/0000-0002-3905-2751"))
 Description: This package contains datasets for teaching purposes from RGirls Community.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
