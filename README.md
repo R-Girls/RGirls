@@ -13,7 +13,7 @@ devtools::install_github("R-Girls/RGirls")
 Once you've installed the package, you can load the library in the standard way:
 
 ```r
-library(RGirlsData)
+library(RGirls)
 ```
 **Basic usage:**
 ```r
