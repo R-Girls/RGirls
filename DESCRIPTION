@@ -17,3 +17,4 @@ Depends:
 RoxygenNote: 7.2.1
 Imports: 
     tibble
+URL: https://r-girls.github.io/RGirls-pkg/

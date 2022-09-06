@@ -8,6 +8,13 @@
 \description{
 This package contains datasets for teaching purposes from RGirls Community.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://r-girls.github.io/RGirls-pkg/}
+}
+
+}
 \author{
 \strong{Maintainer}: Batool Almarzouq \email{batool@liverpool.ac.uk} (\href{https://orcid.org/0000-0002-3905-2751}{ORCID})
 

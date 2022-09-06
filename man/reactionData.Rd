@@ -20,6 +20,6 @@ A tibble with 103 rows and 4 variables:
 reactionData
 }
 \description{
-This test uses the known properties of gravity to determine how long it takes a person to respond to the dropping of an object by measuring how far the object can falls before being caught. This data was collected from studnts before and after drinking coke.
+This test uses the known properties of gravity to determine how long it takes a person to respond to the dropping of an object by measuring how far the object can fall before being caught. This data was collected from students before and after drinking coke.
 }
 \keyword{datasets}
