@@ -1,7 +1,6 @@
 # RGirlsData
 
-This package contains datasets for teaching purposes from RGirls Community. The current data avilable from the pakage is data of ruler drop test reaction time, called `reactionData`. This test uses the known properties of gravity to determine how long it takes a person to respond to the dropping of an object by measuring how far the object can falls before being caught. This data was collected from studnts before and after drinking coke.
-
+This package contains datasets for teaching purposes from RGirls Community. The current data available from the package is data of ruler drop test reaction time, called `reactionData`. This test uses the known properties of gravity to determine how long it takes a person to respond to the dropping of an object by measuring how far the object can fall before being caught. This data was collected from students before and after drinking coke.
 
 
 If you find any bugs, have any feature requests or feedback, please submit an issue.
