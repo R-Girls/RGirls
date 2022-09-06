@@ -1,11 +1,19 @@
 Package: RGirls
 Type: Package
-Title: What the Package Does (Title Case)
+Title: RGirlsData
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: 
+    person(given = "Batool",
+           family = "Almarzouq",
+           role = c("aut", "cre"),
+           email = "batool@liverpool.ac.uk",
+           comment = c(ORCID = "https://orcid.org/0000-0002-3905-2751"))
+Description: This package contains datasets for teaching purposes from RGirls Community.
+License: MIT
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.2.1
+Imports: 
+    tibble
