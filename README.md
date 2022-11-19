@@ -8,7 +8,7 @@ If you find any bugs, have any feature requests or feedback, please submit an is
 To download and install the development version of the package, use `devtools`:
 ```r
 install.packages("devtools")
-devtools::install_github("R-Girls/RGirls")
+devtools::install_github("R-Girls/RGirlsData")
 ```
 Once you've installed the package, you can load the library in the standard way:
 
