@@ -41,7 +41,7 @@ library(tidyverse)
 -
 
 <center>
-![Centered image with modified width - note no spaces around the equal sign!](https://media.timeout.com/images/105761560/image.jpg){width=33%}
+![Here's how to include an image and caption - note no spaces around the equal sign!](https://media.timeout.com/images/105761560/image.jpg){width=33%}
 </center>
 
 
