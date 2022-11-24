@@ -1,0 +1,196 @@
+/* Body & titles */
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  color: var(--color-body);
+}
+
+main > h1,
+main > h2 {
+  font-family: var(--font-title);
+  text-transform: uppercase;
+}
+
+main > h3,
+main > h4,
+main > h5,
+main > h6 {
+  font-family: var(--font-header);
+}
+
+h1 {
+  font-size: 36pt;
+  color: var(--rg-dark_pink);
+  font-family: var(--font-title);
+  line-height: 1;
+  margin-left: 32.5px;
+  string-set: h1-text content(text)
+}
+
+/*
+.shorttitle {
+  string-set: h1-text content(text);
+} */
+
+h2 {
+  font-size: 20pt;
+  font-family: var(--font-header);
+  font-weight: bold;
+  color: var(--rg-purple);
+  line-height: 1;
+  /*text-transform: uppercase;*/
+  margin-bottom: 0px;
+  padding-top: 24px;
+  string
+}
+
+h3 {
+  font-size: 16pt;
+  font-family: var(--font-header);
+  font-weight: bold;
+  color: var(--rg-purple);
+  line-height: 1;
+}
+
+h4 {
+  font-size: 12pt;
+  color: var(---rg-dark_pink);
+}
+
+p, ul, li {
+ font-size: 12pt;
+ color: var(--color-body);
+ font-family: var(--font-main);
+}
+
+/* Block quote styling: https://codepen.io/cliftwalker/pen/XJaEXY */
+
+.blockquote{
+  font-size: 2em;
+  color: var(--rg-dark_pink);
+  width:95%;
+  margin:0;
+  font-style:italic;
+  padding: 30px;
+  margin: 30px 0 30px 0;
+  position: relative;
+}
+
+.pink-emphasis p{
+  font-size: 14pt;
+  font-family: var(--font-header);
+  margin:0;
+  font-style:italic;
+  position: relative;
+  color: var(--rg-dark_pink);
+}
+
+/* Prevent footnotes from affecting line height */
+/* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+.footnote {
+  font-size: 9pt !important;
+  margin-left: 0px;
+  margin-right: 65px;
+}
+
+/* Links */
+a {
+  text-decoration: underline;
+  color: var(--color-body);
+  text-decoration-color: var(--rg_dark_pink);
+}
+
+/* HR bar */
+hr.footnote-break{
+  border: 0.5px solid var(--rg_light_pink);
+  margin-left: 0in !important;
+  margin-right: 32.5px !important;
+}
+
+.caption {
+  text-align: left;
+  font-weight: bold;
+  font-family: var(--font-main);
+  color: var(--rg-light_text);
+  font-size: 11pt;
+}
+
+.figure {
+  break-inside: avoid;
+}
+
+/* Full width images */
+
+.full-width-image {
+  margin-right: 65px;
+}
+
+/* To add: navy bold, oramge emphasis, blue emphasis */
+/*Making bold text navy*/
+strong {
+  font-family: var(--font-header);
+  color: var(--cara-dark_text);
+}
+
+
+ul li {
+  list-style: none; /* Remove default bullets */
+  text-indent: -0.4em;
+  line-height: 1.2;
+  padding-bottom: 0.5em;
+}
+
+ul li::before {
+  content: "\25FC";  /* Add content: \2022 is the CSS Code/unicode for a bullet; add a space for easier alignment! */
+  color: var(--rg-dark_pink); /* Change the color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.5em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  font-size: 66%;
+}
+
+.panel-tabset ul li::before {
+  content: ""; /* Remove default bullets */
+}
+
+
+div.sourceCode {
+  margin: 0;
+  padding-left: 1em;
+  border-color: #D67595;
+  border-left-style: solid;
+  border-left-width: 2px;
+}
+
+h2.author {
+  font-size: 14pt;
+  font-family: var(--font-header);
+  color: var(--rg-light_text);
+  line-height: 1;
+  padding-left: 32.5px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+h2.date {
+  font-size: 12pt;
+  font-family: var(--font-header);
+  color: var(--rg-light_text);
+  line-height: 1;
+  padding-left: 32.5px;
+  margin-bottom: 0px;
+  margin-top: 6.5px;
+  padding-top: 0px;
+}

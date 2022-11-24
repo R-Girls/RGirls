@@ -8,8 +8,8 @@
 #' @return A named vector of colours
 #' @export
 #'
-#' @examples r_girls_colours(c("dark_pink", "goa_green"))
-r_girls_colours <- function(cols = NULL) {
+#' @examples rgirls_colours(c("dark_pink", "goa_green"))
+rgirls_colours <- function(cols = NULL) {
 
 
   colour_vector <- c(dark_pink = "#c44a79",

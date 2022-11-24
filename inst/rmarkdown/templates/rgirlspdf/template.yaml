@@ -1,0 +1,4 @@
+name: rgirlspdf
+description: >
+   A simple pdf document, branded for the R Girls Schools Network.
+create_dir: false

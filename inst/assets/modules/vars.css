@@ -1,0 +1,33 @@
+:root {
+  /* interface */
+  --color-background: rgba(0, 0, 0, 0.2);
+  --color-paper: white;
+
+  /* fonts */
+  --font-main: "Nunito Sans";
+  --font-header: "Amaranth";
+  --font-title: "Amaranth";
+  --font-monospace: "DM Mono"
+
+  /* base unit */
+  --unit: 2cm;
+  --margin-unit: 0.5cm;
+
+  /* margin */
+  --pagedjs-margin-left: 65px;
+  --pagedjs-margin-right: 65px;
+  --pagedjs-margin-bottom: 65px;
+  --pagedjs-margin-top: 65px;
+
+  /* fonts */
+  --font-size: 12px;
+  --color-body: #140E15;
+
+  /* colours */
+  --rg-dark_pink: #c44a79;
+  --rg-light_pink: #f2b6c0;
+  --rg-dark_text: #140E15;
+  --rg-light_text: #524E53;
+  --rg-purple: #66476b;
+}
+

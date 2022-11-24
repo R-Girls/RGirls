@@ -1,0 +1,144 @@
+/* Layout */
+
+/* pages */
+@page {
+  /* A4 paper size */
+  size: 8.25in 11.75in;
+
+  @bottom-left {
+    content: "Developed by the R Girls School Network in partnership with";
+    color: var(--rg-purple);
+    text-align: right;
+    font-size: 10pt;
+    white-space: pre-wrap;
+    width: 3.5in;
+    padding-left:97.5px;
+  }
+
+   @top-right-corner {
+    content: "";
+    background-image: url(../logos/r-girls-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+  }
+
+   @top-left-corner {
+    content: "";
+    background-image: url(../logos/flowers.png);
+    background-repeat: no-repeat;
+    background-color:  #715475;
+    background-size: 30px;
+    background-position: center;
+  }
+
+  @bottom-right {
+    content: "";
+    background-image: url(../logos/goa-logo.jpg);
+    background-repeat: no-repeat;
+    margin-left: 32.5px;
+    background-size: 120px;
+    background-position: left;
+  }
+
+  @left-top {
+    content: "";
+    background-color: #715475;
+    }
+
+   @left-middle {
+        content: "";
+        background-color:  #715475;
+    }
+
+    @right-middle {
+        content: "";
+    }
+
+    @right-top {
+        content: "";
+    }
+
+    @right-bottom {
+        content: "";
+    }
+
+   @left-bottom {
+        content: string(h1-text);
+        background-color: #715475;
+        font-size: 22px;
+        color: #E0D1E1;
+        font-family: var(--font-header);
+        white-space: nowrap;
+        height: 200px;
+    }
+
+   @bottom-right-corner {
+        content: counter(page);
+        font-size: 16px;
+        color: var(--rg-purple);
+        text-align: center;
+    }
+
+  @bottom-left-corner {
+        content: "";
+        background-color:  #715475;
+    }
+}
+
+
+/* Add light strip... */
+.pagedjs_margin {
+  border-right-color: #715475;
+  border-right-width: 4px;
+  border-right-style: solid;
+}
+
+.pagedjs_page .pagedjs_margin-bottom-left {
+  border-right-style: none;
+}
+.pagedjs_page .pagedjs_margin-bottom-center {
+  border-right-style: none;
+}
+
+.pagedjs_page .pagedjs_margin-bottom-right {
+  border-right-style: none;
+}
+
+/* Margins for text */
+.main {
+    margin-right: 0px;
+    margin-left: 32.5px;
+}
+
+/* Columns */
+.wrap-columns {
+  display: flex;
+  padding: 0 0pt;
+}
+
+.two-columns{
+  column-count: 2;
+}
+
+.two-columns p{
+  margin-top: 0;
+}
+
+.two-columns h2{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.caption{
+  text-align: center;
+}
+
+/* repeat title in margin*/
+.pagedjs_page .pagedjs_margin-left-bottom>.pagedjs_margin-content::after{
+  position: absolute;
+  transform: translateY(-10%) rotate(-90deg);
+  transform-origin: 0px -60%;
+  text-align: left;
+}
+
