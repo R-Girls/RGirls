@@ -51,10 +51,13 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="rgirlsdata">RGirlsData<a class="anchor" aria-label="anchor" href="#rgirlsdata"></a>
+<div class="page-header"><h1 id="rgirls">RGirls<a class="anchor" aria-label="anchor" href="#rgirls"></a>
 </h1></div>
-<p>This package contains datasets for teaching purposes from RGirls Community. The current data available from the package is data of ruler drop test reaction time, called <code>reactionData</code>. This test uses the known properties of gravity to determine how long it takes a person to respond to the dropping of an object by measuring how far the object can fall before being caught. This data was collected from students before and after drinking coke.</p>
-<p>If you find any bugs, have any feature requests or feedback, please submit an issue.</p>
+<p><img src="inst/assets/logos/logo-social.png"></p>
+<p>This package contains a lesson plan template and some datasets for teaching purposes from RGirls Community. It is intended as a resource for both teachers and pupils, and is developed and maintainted by the RGirls School Network, in partnership with Green Oak Academy.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>To download and install the development version of the package, use <code>devtools</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
@@ -62,24 +65,69 @@
 <p>Once you’ve installed the package, you can load the library in the standard way:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-girls.github.io/RGirls-pkg/">RGirls</a></span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="lesson-plan-template">Lesson plan template<a class="anchor" aria-label="anchor" href="#lesson-plan-template"></a>
+</h2>
+<p>We have a lesson plan template which provides a starting point for consistency across our lessons. The template makes use of {pagedown}, and the output looks like this:</p>
+<center>
+<img src="inst/assets/images/lesson-plan.png" style="width:30.0%">
+</center>
+<p>To make use of this template, make sure you have the most recent version of the package installed.</p>
+<ul>
+<li>Click on the new document icon</li>
+<li>Select “RMarkdown Document”</li>
+<li>In the pop up, choose “From a template”</li>
+<li>Select “rgirlspdf” from the list of available templates</li>
+<li>Choose a title for your lesson plan, and a location for it to be saved</li>
+<li>Modify the file as needed</li>
+<li>Save and Knit the file as usual</li>
+</ul>
+<center>
+<img src="inst/assets/images/template-demo.gif">
+</center>
+<p>This will produce a PDF as well as an html document within the location you selected.</p>
+<div class="section level3">
+<h3 id="a-note-on-fonts">A note on fonts<a class="anchor" aria-label="anchor" href="#a-note-on-fonts"></a>
+</h3>
+<p>The easiest way to make use of the fonts in the template is to make sure you have access to the internet while knitting your lesson plan. The package works by calling the Google Fonts API to load the fonts.</p>
+<p>If you prefer to work offline, you can install the fonts, and the package will find them in the repo. To do this, you need to navigate to the <code>assets/fonts/</code> folder inside the package (look for the <code>RGirls</code> folder within your normal R library location), right click on the font files and select “Install for all Users”.</p>
+</div>
+<div class="section level3">
+<h3 id="rgirls-colours">RGirls colours<a class="anchor" aria-label="anchor" href="#rgirls-colours"></a>
+</h3>
+<p>The colours used in the template are saved for easy reuse in graphs, if you want to create graphs with matching colours:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/rgirls_colours.html">rgirls_colours</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">##      dark_pink     light_pink         purple      goa_green      goa_brown </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="do">##      "#c44a79"      "#f2b6c0"      "#66476b"      "#98c254"      "#917254" </span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## goa_dark_brown      dark_text     light_text </span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">##      "#6f553a"      "#140E15"      "#524E53"</span></span></code></pre></div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="datasets">Datasets<a class="anchor" aria-label="anchor" href="#datasets"></a>
+</h2>
+<p>The current data available from the package is data of ruler drop test reaction time, called <code>reactionData</code>. This test uses the known properties of gravity to determine how long it takes a person to respond to the dropping of an object by measuring how far the object can fall before being caught. This data was collected from students before and after drinking coke.</p>
 <p><strong>Basic usage:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>reactionData</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 103 × 4</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   student  test time_before time_after</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>   <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>       <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>      <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span> Amy         <span class="dv">1</span>       <span class="fl">0.207</span>      <span class="fl">0.163</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span> Amy         <span class="dv">2</span>       <span class="fl">0.221</span>      <span class="fl">0.181</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span> Amy         <span class="dv">3</span>       <span class="fl">0.136</span>      <span class="fl">0.175</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span> Amy         <span class="dv">4</span>       <span class="fl">0.197</span>      <span class="fl">0.15</span> </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span> Amy         <span class="dv">5</span>       <span class="fl">0.111</span>     <span class="cn">NA</span>    </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span> Betty       <span class="dv">1</span>       <span class="fl">0.3</span>        <span class="fl">0.128</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span> Betty       <span class="dv">2</span>       <span class="fl">0.239</span>      <span class="fl">0.273</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span> Betty       <span class="dv">3</span>       <span class="fl">0.175</span>      <span class="fl">0.217</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span> Betty       <span class="dv">4</span>       <span class="fl">0.26</span>       <span class="fl">0.275</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> Carol       <span class="dv">1</span>       <span class="fl">0.186</span>      <span class="fl">0.207</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># … with 93 more rows</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>reactionData</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 103 × 4</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   student  test time_before time_after</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>   <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>   <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>       <span class="er">&lt;</span>dbl<span class="sc">&gt;</span>      <span class="er">&lt;</span>dbl<span class="sc">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a> <span class="dv">1</span> Amy         <span class="dv">1</span>       <span class="fl">0.207</span>      <span class="fl">0.163</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a> <span class="dv">2</span> Amy         <span class="dv">2</span>       <span class="fl">0.221</span>      <span class="fl">0.181</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a> <span class="dv">3</span> Amy         <span class="dv">3</span>       <span class="fl">0.136</span>      <span class="fl">0.175</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a> <span class="dv">4</span> Amy         <span class="dv">4</span>       <span class="fl">0.197</span>      <span class="fl">0.15</span> </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">5</span> Amy         <span class="dv">5</span>       <span class="fl">0.111</span>     <span class="cn">NA</span>    </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a> <span class="dv">6</span> Betty       <span class="dv">1</span>       <span class="fl">0.3</span>        <span class="fl">0.128</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a> <span class="dv">7</span> Betty       <span class="dv">2</span>       <span class="fl">0.239</span>      <span class="fl">0.273</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a> <span class="dv">8</span> Betty       <span class="dv">3</span>       <span class="fl">0.175</span>      <span class="fl">0.217</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a> <span class="dv">9</span> Betty       <span class="dv">4</span>       <span class="fl">0.26</span>       <span class="fl">0.275</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> Carol       <span class="dv">1</span>       <span class="fl">0.186</span>      <span class="fl">0.207</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># … with 93 more rows</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ℹ Use `print(n = ...)` to see more rows</span></span></code></pre></div>
+</div>
 <div class="section level2">
 <h2 id="contributing-two_hearts">Contributing <span class="emoji" data-emoji="two_hearts">💕</span>
 <a class="anchor" aria-label="anchor" href="#contributing-two_hearts"></a>
@@ -87,7 +135,7 @@
 <ul>
 <li>If you like it, leave your star in this project <span class="emoji" data-emoji="star2">🌟</span>
 </li>
-<li>If you would like to complain/suggest/contribute to this project, feel free to open a issue <span class="emoji" data-emoji="heart_decoration">💟</span>
+<li>If you would like to report a bug/complain/suggest/contribute to this project, feel free to <a href="https://github.com/R-Girls/RGirls/issues" class="external-link">open a issue</a> <span class="emoji" data-emoji="heart_decoration">💟</span>
 </li>
 <li>Please follow our <a href="">contributing guidelines</a>.</li>
 </ul>
@@ -98,7 +146,7 @@
 <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" class="external-link">Creative Commons Attribution 4.0 International License</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by/4.0/" class="external-link"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="CC BY 4.0"></a></p>
 <div class="section level3">
-<h3 id="todo">TODO:<a class="anchor" aria-label="anchor" href="#todo"></a>
+<h3 id="work-in-progress">Work in progress<a class="anchor" aria-label="anchor" href="#work-in-progress"></a>
 </h3>
 <ul>
 <li>FAIRfication of the package</li>
