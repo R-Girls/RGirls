@@ -43,14 +43,9 @@ To make use of this template, make sure you have the most recent version of the 
 - Modify the file as needed
 - Save and Knit the file as usual
 
-<center>
-
-![](inst/assets/images/template-demo.gif)
-</center>
-
-
 This will produce a PDF as well as an html document within the location you selected. 
 
+You can find a GIF demonstrating this process [here](https://github.com/R-Girls/RGirls/blob/main/inst/assets/images/template-demo.gif).
 
 ### A note on fonts
 
